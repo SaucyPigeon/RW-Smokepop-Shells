@@ -2,9 +2,11 @@
 <ModMetaData>
   <name>Smokepop Shells</name>
   <author>Saucy_Pigeon</author>
-  <url></url>
+  <url>https://steamcommunity.com/sharedfiles/filedetails/?id=1961810743</url>
   <description>Adds smokepop mortar shells and IED traps.</description>
   <supportedVersions>
     <li>1.0</li>
+	<li>1.1</li>
   </supportedVersions>
+  <packageId>SaucyPigeon.SmokepopShells</packageId>
 </ModMetaData>
