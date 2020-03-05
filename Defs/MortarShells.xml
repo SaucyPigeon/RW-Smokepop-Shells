@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs> 
+ 
+  <ThingDef ParentName="MakeableShellBase">
+    <defName>Shell_Smokepop</defName>
+    <label>smokepop shell</label>
+    <description>A shell filled with a substance that quickly disperses a thick smoke. Can be fired from mortars or installed as a trap. Explodes with smoke when damaged.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Shell/Shell_Smokepop</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.9</explosiveRadius>
+        <explosiveDamageType>Smoke</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+        <startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+		<postExplosionSpawnThingDef>Gas_Smoke</postExplosionSpawnThingDef>
+		<postExplosionSpawnChance>1</postExplosionSpawnChance>
+        <wickTicks>
+          <min>30</min>
+          <max>60</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <projectileWhenLoaded>Bullet_Shell_Smokepop</projectileWhenLoaded>
+    <costList>
+      <Steel>20</Steel>
+      <Chemfuel>10</Chemfuel>
+    </costList>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Shell_Smokepop</defName>
+    <label>smokepop shell</label>
+    <graphicData>
+      <texPath>Things/Projectile/ShellSmokepop</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Smoke</damageDef>
+      <!-- damage amount is the damage def default -->
+      <speed>41</speed>
+      <explosionRadius>4</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <soundExplode>MortarBomb_Explode</soundExplode>
+      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
+	  <postExplosionSpawnThingDef>Gas_Smoke</postExplosionSpawnThingDef>
+    </projectile>
+  </ThingDef>
+  
+</Defs>
