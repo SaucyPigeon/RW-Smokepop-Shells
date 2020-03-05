@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs> 
+ 
+  <ThingDef ParentName="TrapIEDBase">
+    <defName>TrapIED_Smokepop</defName>
+    <label>IED smokepop trap</label>
+    <description>A pair of smokepop shells connected to a touch-activated trigger. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    <graphicData>
+      <texPath>Things/Building/Security/IEDSmokepop</texPath>
+    </graphicData>
+    <costList>
+      <Shell_Smokepop>2</Shell_Smokepop>
+    </costList>
+    <!--<designationHotKey>Misc7</designationHotKey>-->
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>4</explosiveRadius>
+        <explosiveDamageType>Smoke</explosiveDamageType>
+        <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+		<postExplosionSpawnThingDef>Gas_Smoke</postExplosionSpawnThingDef>
+		<postExplosionSpawnChance>1</postExplosionSpawnChance>
+        <wickTicks>
+          <min>15</min>
+          <max>15</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <specialDisplayRadius>4</specialDisplayRadius>
+  </ThingDef>
+
+  
+</Defs>

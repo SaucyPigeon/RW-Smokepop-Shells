@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<!-- Disallow smokepop shells by default from mortars -->
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName = "Artillery_Mortar"]/building/defaultStorageSettings/filter/disallowedThingDefs</xpath>
+		<value>
+			<li>Shell_Smokepop</li>
+		</value>
+	</Operation>
+	
+</Patch>
